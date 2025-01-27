@@ -4,98 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Britannia</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/png" href="./assets/EyeSauron.svg">
-    <link rel="stylesheet" href="./styles/carrusel.css">
+    <title>Britannia Vanilla</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/carrusel.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
 </head>
 
 <body>
-    <div id="sidebar" class="sidebar">
-        <button id="sidebarToggle" class="sidebar-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="sidebar-menu">
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
     <div class="container">
         <div class="hero-section">
             <div class="eye-container">
                 <div class="aura"></div>
+                <!-- La imagen del ojo se inserta dinámicamente con JavaScript -->
             </div>
         </div>
 
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="#intro">Inicio</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#carousel">Galería</a></li>
+                </ul>
+            </div>
+        </div>
 
         <main class="main-content">
-            <header>
-                
-            </header>
-            <section class="intro">
+            <section id="intro" class="intro section">
                 <div>
-                    <h1 class="">Bienvenido a Britannia</h1>
-                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ullam libero ratione
-                        adipisci recusandae omnis sunt obcaecati exercitationem fugiat corrupti assumenda iusto
-                        consequuntur
-                        vitae magnam quasi rerum id animi iure saepe, reprehenderit eaque dolorum natus voluptates?
-                        Quae,
-                        perferendis fugit? Porro, saepe. Minima qui maxime iste debitis voluptatem quas perferendis
-                        similique unde nostrum, temporibus suscipit quis dignissimos autem porro, consequuntur molestiae
-                        voluptatum illum enim, ea dolorum? Voluptate maxime nihil quos voluptatibus molestiae,
-                        doloremque at
-                        laudantium architecto amet aperiam reiciendis ullam, blanditiis odio voluptates mollitia
-                        officiis
-                        ducimus ipsa officia veniam animi nobis! Maiores, sequi. Molestias, laudantium? Saepe
-                        repellendus
-                        quasi aliquid necessitatibus mollitia!</p>
+                    <h1>Bienvenido a Britannia</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque cum voluptatum quisquam
+                        molestias doloribus perferendis voluptate sequi expedita rem eaque asperiores, totam nesciunt
+                        repudiandae at, id odit accusantium magni animi natus quibusdam ipsam ducimus possimus? Eaque
+                        laudantium doloremque error quasi consequuntur! Iure nesciunt explicabo, molestiae magni illo
+                        nobis eligendi possimus quibusdam voluptate optio laboriosam quia dolores veniam qui ea eum
+                        corporis ut quis, atque ipsam ab consectetur deserunt. Voluptatibus temporibus molestias
+                        distinctio ipsum voluptatum eligendi repellat adipisci animi iste. Quisquam expedita obcaecati
+                        vel numquam alias nesciunt vero voluptatibus aliquid quia, eos perferendis illo error harum
+                        sapiente dolore illum voluptate exercitationem!</p>
                 </div>
                 <div class="img-container">
-                    <!--<img src="./assets/SpawnOjo.png" alt="" width="600px" height="450px">-->
+                    <!-- La imagen de Spawn se inserta dinámicamente con JavaScript -->
                 </div>
             </section>
-            <div class="carousel-container">
+
+            <section id="carousel" class="carousel-container section">
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="/assets/BondioHead.png" alt="Imagen 1">
-                        <img src="/assets/GabyHead.png" alt="Imagen 2">
-                        <img src="/assets/OmsijepseHead.png" alt="Imagen 3">
-                        <img src="/assets/pacoHead.png" alt="Imagen 4">
-                        <img src="/assets/LuneiHead.png" alt="Imagen 5">
-                        <img src="/assets/DVDTVHead.png" alt="Imagen 3">
-                        <img src="/assets/daremilHead.png" alt="Imagen 4">
-                        <img src="/assets/BondioHead.png" alt="Imagen 1">
-                        <img src="/assets/GabyHead.png" alt="Imagen 2">
-                        <img src="/assets/LuneiHead.png" alt="Imagen 5">
+                        <img src="assets/BondioHead.png" alt="Imagen 1">
+                        <img src="assets/GabyHead.png" alt="Imagen 2">
+                        <img src="assets/pacoHead.png" alt="Imagen 3">
+                        <img src="assets/OmsijepseHead.png" alt="Imagen 4">
+                        <img src="assets/daremilHead.png" alt="Imagen 5">
+                        <img src="assets/LuneiHead.png" alt="Imagen 6">
+                        <img src="assets/DVDTVHead.png" alt="Imagen 7">
+                        <img src="assets/DeixolHead.png" alt="Imagen 8">
+                        <img src="assets/DogHead.png" alt="Imagen 9">
                     </div>
                 </div>
-            </div>
-            <section class="about">
-                <h2>¿Qué es Britannia?</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis tenetur eaque qui aspernatur ab.
-                    Explicabo deserunt harum quos non consectetur dolor odit repellendus numquam tenetur quas
-                    voluptatibus incidunt fugiat maiores voluptatem, nulla porro mollitia, tempore voluptatum minus sit
-                    fuga reiciendis exercitationem, molestiae ipsum. Hic odio, obcaecati corporis a repellat autem,
-                    saepe expedita molestias, odit dolore pariatur! Dolores provident similique corporis ex architecto
-                    quisquam praesentium cupiditate assumenda eveniet a, numquam exercitationem placeat sed fugiat
-                    molestiae nostrum quo non enim sequi optio repudiandae consequatur. Fugiat sapiente labore veritatis
-                    corrupti illo eligendi, modi laudantium iure error accusantium, deserunt rem nam accusamus nesciunt
-                    hic?</p>
             </section>
+
+            <section id="about" class="about section">
+                <h2>Acerca de Nosotros</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic doloremque minus corporis et
+                    repellendus a dicta architecto quisquam illum. Ullam saepe ut vero obcaecati vitae architecto fugit
+                    voluptas natus iure odio impedit necessitatibus soluta nam, nostrum at. Maxime, nam. Mollitia
+                    tenetur possimus praesentium temporibus maxime odio, maiores cupiditate voluptate! Distinctio
+                    aliquam eaque, voluptatibus nostrum vitae debitis consequatur commodi molestias vel voluptatum
+                    maiores perferendis. Nulla, quod. Perferendis asperiores consequuntur dolorem cum aut incidunt quam
+                    suscipit numquam facilis facere provident molestiae qui quo, assumenda similique corporis inventore
+                    aliquid omnis. Officiis id deleniti optio! Laboriosam magnam beatae quaerat libero illum pariatur
+                    totam dignissimos.</p>
+            </section>
+
+
         </main>
     </div>
+
     <script src="./scripts/main.js"></script>
     <script src="./scripts/sidebar.js"></script>
 </body>
 
 </html>
-
