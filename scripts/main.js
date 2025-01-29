@@ -141,4 +141,62 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   requestAnimationFrame(animateCarousel)
+
+  // Funcionalidad del carrusel
+  const carouselTrack = document.querySelector(".carousel-track")
+  const carouselImages = carouselTrack.querySelectorAll("img")
+
+  carouselImages.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      carouselTrack.classList.add("paused")
+    })
+
+    img.addEventListener("mouseleave", () => {
+      carouselTrack.classList.remove("paused")
+    })
+
+    img.addEventListener(
+      "touchstart",
+      () => {
+        carouselTrack.classList.add("paused")
+      },
+      { passive: true },
+    )
+
+    img.addEventListener("touchend", () => {
+      carouselTrack.classList.remove("paused")
+    })
+  })
+
+  // Funcionalidad para las secciones expandibles
+  const expandableSections = document.querySelectorAll(".expandable-section")
+
+  expandableSections.forEach((section) => {
+    section.addEventListener("click", (event) => {
+      // Evitar que el clic se propague al documento
+      event.stopPropagation()
+
+      // Toggle de la clase 'expanded'
+      section.classList.toggle("expanded")
+
+      // Ajustar la altura máxima del contenido expandido
+      const expandedContent = section.querySelector(".expanded-content")
+      if (section.classList.contains("expanded")) {
+        expandedContent.style.maxHeight = expandedContent.scrollHeight + "px"
+      } else {
+        expandedContent.style.maxHeight = "0px"
+      }
+    })
+  })
+
+  // Cerrar secciones expandidas al hacer clic fuera de ellas
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".expandable-section")) {
+      expandableSections.forEach((section) => {
+        section.classList.remove("expanded")
+        const expandedContent = section.querySelector(".expanded-content")
+        expandedContent.style.maxHeight = "0px"
+      })
+    }
+  })
 })

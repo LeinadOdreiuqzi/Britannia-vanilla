@@ -17,6 +17,12 @@
   width: 100px;
   height: 100px;
   margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 @keyframes scroll {
@@ -28,8 +34,7 @@
   }
 }
 
-.carousel:hover .carousel-track {
+.paused {
   animation-play-state: paused;
 }
 
-  

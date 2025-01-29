@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           sidebarToggle.style.opacity = "1"
           sidebarToggle.style.pointerEvents = "auto"
-        }, 300) // Este delay coincide con la duración de la transición del sidebar
+        }, 300)
       }
     }
   }
@@ -28,12 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
         isScrollingUp = false
         if (sidebarToggle) {
           sidebarToggle.style.opacity = "0"
+          sidebarToggle.style.transform = "translateY(-100%)"
         }
       } else {
         // Scrolling up
         isScrollingUp = true
         if (sidebarToggle) {
           sidebarToggle.style.opacity = "1"
+          sidebarToggle.style.transform = "translateY(0)"
         }
       }
     }
@@ -47,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", handleScroll)
 
-  // Cerrar el sidebar si se hacer clic afuera de el
+  // Close sidebar when clicking outside
   document.addEventListener("click", (e) => {
     if (sidebar && sidebarToggle && !sidebar.contains(e.target) && e.target !== sidebarToggle) {
       if (sidebar.classList.contains("open")) {
@@ -61,4 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
       toggleSidebar()
     }
   })
+
+  // Añadir botón de cierre en el sidebar
+  const closeButton = document.createElement("button")
+  closeButton.innerHTML = "×"
+  closeButton.classList.add("sidebar-close")
+  closeButton.addEventListener("click", toggleSidebar)
+  sidebar.appendChild(closeButton)
 })

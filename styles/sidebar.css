@@ -1,72 +1,93 @@
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(249, 115, 22, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgb(249, 115, 22);
+  transform: scale(1.1);
+}
+
+.sidebar-menu {
+  padding: 20px;
+}
+
+.sidebar-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar-menu ul li a:hover {
+  color: rgb(249, 115, 22);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
   }
-  
+
   .sidebar.open {
     left: 0;
   }
-  
+
   .sidebar-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: rgba(249, 115, 22, 0.8);
-    color: white;
-    border: none;
-    border-radius: 60%;
-    padding: 10px;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
     font-size: 20px;
-    cursor: pointer;
-    z-index: 1001;
-    transition: opacity 0.3s ease-in-out;
   }
-  
-  .sidebar-toggle:hover {
-    transition: all 0.3s ease;
-    background-color: rgb(249, 115, 22);
-  }
-  
-  .sidebar-menu {
-    padding: 20px;
-  }
-  
-  .sidebar-menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar-menu ul li {
-    margin-bottom: 15px;
-  }
-  
-  .sidebar-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .sidebar-menu ul li a:hover {
-    color: rgb(249, 115, 22);
-  }
-  
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%;
-      left: -100%;
-    }
-  }
-  
-  .sidebar.open .sidebar-toggle {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
