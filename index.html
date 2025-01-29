@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/carrusel.css">
     <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/galeria.css">
+    <link rel="icon" href="./assets/EyeSauron.svg">
 </head>
 
 <body>
@@ -19,15 +21,17 @@
             </div>
         </div>
 
-        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">☰</button>
 
         <div id="sidebar" class="sidebar">
             <div class="sidebar-menu">
-                <ul>
-                    <li><a href="#intro">Inicio</a></li>
-                    <li><a href="#about">Acerca de</a></li>
-                    <li><a href="#carousel">Galería</a></li>
-                </ul>
+                <nav>
+                    <ul>
+                        <li><a href="#intro">Inicio</a></li>
+                        <li><a href="#about">Acerca de</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
@@ -46,31 +50,31 @@
                         sapiente dolore illum voluptate exercitationem!</p>
                 </div>
                 <div class="img-container">
-                    <!-- La imagen de Spawn se inserta dinámicamente con JavaScript -->
                 </div>
             </section>
 
             <section id="carousel" class="carousel-container section">
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="assets/BondioHead.png" alt="Imagen 1">
-                        <img src="assets/GabyHead.png" alt="Imagen 2">
-                        <img src="assets/pacoHead.png" alt="Imagen 3">
-                        <img src="assets/OmsijepseHead.png" alt="Imagen 4">
-                        <img src="assets/daremilHead.png" alt="Imagen 5">
-                        <img src="assets/LuneiHead.png" alt="Imagen 6">
-                        <img src="assets/DVDTVHead.png" alt="Imagen 7">
-                        <img src="assets/DeixolHead.png" alt="Imagen 8">
-                        <img src="assets/caydemHead.png" alt="Imagen 9">
-                        <img src="assets/DaxterHead.png" alt="Imagen 10">
-                        <img src="assets/duzhii.png" alt="Imagen 11">
-                        <img src="assets/korlachanHead.png" alt="Imagen 12">
-                        <img src="assets/embiozHead.png" alt="Imagen 13">
-                        <img src="assets/gartxiHead.png" alt="Imagen 14">
-                        <img src="assets/mereHead.png" alt="Imagen 15">
-                        <img src="assets/muchochicleHead.png" alt="Imagen 16">
-                        <img src="assets/papitaHead.png" alt="Imagen 17">
-                        <img src="assets/sznokHead.png" alt="Imagen 18">
+                        <img src="assets/BondioHead.png" alt="Imagen 1" loading="lazy">
+                        <img src="assets/GabyHead.png" alt="Imagen 2" loading="lazy">
+                        <img src="assets/pacoHead.png" alt="Imagen 3" loading="lazy">
+                        <img src="assets/OmsijepseHead.png" alt="Imagen 4" loading="lazy">
+                        <img src="assets/daremilHead.png" alt="Imagen 5" loading="lazy">
+                        <img src="assets/LuneiHead.png" alt="Imagen 6" loading="lazy">
+                        <img src="assets/DVDTVHead.png" alt="Imagen 7" loading="lazy">
+                        <img src="assets/DeixolHead.png" alt="Imagen 8" loading="lazy">
+                        <img src="assets/caydemHead.png" alt="Imagen 9" loading="lazy">
+                        <img src="assets/DaxterHead.png" alt="Imagen 10" loading="lazy">
+                        <img src="assets/duzhii.png" alt="Imagen 11" loading="lazy">
+                        <img src="assets/korlachanHead.png" alt="Imagen 12" loading="lazy">
+                        <img src="assets/embiozHead.png" alt="Imagen 13" loading="lazy">
+                        <img src="assets/gartxiHead.png" alt="Imagen 14" loading="lazy">
+                        <img src="assets/mereHead.png" alt="Imagen 15" loading="lazy">
+                        <img src="assets/muchochicleHead.png" alt="Imagen 16" loading="lazy">
+                        <img src="assets/papitaHead.png" alt="Imagen 17" loading="lazy">
+                        <img src="assets/sznokHead.png" alt="Imagen 18" loading="lazy">
+                        <img src="assets/xuxhuHead.png" alt="Imagen 19" loading="lazy">
                     </div>
                 </div>
             </section>
@@ -88,7 +92,16 @@
                     totam dignissimos.</p>
             </section>
 
-
+            <section id="galeria" class="galeria section">
+                <h2>Galeria</h2>
+                <div class="gallery__container">
+                    <img src="/placeholder.svg" alt="">
+                    <img src="/placeholder.svg" alt="">
+                    <img src="/placeholder.svg" alt="">
+                    <img src="/placeholder.svg" alt="">
+                    <img src="/placeholder.svg" alt="">
+                </div>
+            </section>
         </main>
     </div>
 
@@ -97,3 +110,4 @@
 </body>
 
 </html>
+

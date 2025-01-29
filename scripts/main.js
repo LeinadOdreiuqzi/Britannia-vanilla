@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const eyeContainer = document.querySelector(".eye-container")
   const aura = document.querySelector(".aura")
   const mainContent = document.querySelector(".main-content")
-  const img_container = document.querySelector(".img-container")
+  const imgContainer = document.querySelector(".img-container")
   const carousel = document.querySelector(".carousel")
   const track = document.querySelector(".carousel-track")
 
-  if (!heroSection || !eyeContainer || !aura || !mainContent || !img_container || !carousel || !track) {
+  if (!heroSection || !eyeContainer || !aura || !mainContent || !imgContainer || !carousel || !track) {
     console.error("No se pudieron encontrar todos los elementos necesarios.")
     return
   }
@@ -42,16 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   img.onerror = () => {
     console.error("Error al cargar la imagen.")
+    eyeContainer.style.display = "none"
   }
 
   const img2 = new Image()
   img2.src = "./assets/SpawnOjo.png"
   img2.alt = "Spawn Eye"
   img2.onload = () => {
-    img_container.appendChild(img2)
+    imgContainer.appendChild(img2)
   }
   img2.onerror = () => {
     console.error("Error al cargar la imagen.")
+    imgContainer.style.display = "none"
   }
 
   function updateScroll() {
@@ -117,5 +119,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ajustar la animación cuando cambie el tamaño de la ventana
   window.addEventListener("resize", adjustCarouselAnimation)
-})
 
+  // Implementar animación del carrusel con requestAnimationFrame
+  let lastTime = 0
+  const speed = 0.05 // Ajusta este valor para controlar la velocidad
+
+  function animateCarousel(currentTime) {
+    if (lastTime === 0) {
+      lastTime = currentTime
+    }
+    const deltaTime = currentTime - lastTime
+
+    track.scrollLeft += speed * deltaTime
+
+    if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+      track.scrollLeft = 0
+    }
+
+    lastTime = currentTime
+    requestAnimationFrame(animateCarousel)
+  }
+
+  requestAnimationFrame(animateCarousel)
+})
